@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+             
+    <persistence-unit name="WebCuoiKy" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <!-- Khai báo các Entity (Model) của bạn -->
+        <class>vn.hcmute.models.Users_24110304</class>
+        <class>vn.hcmute.models.Videos_24110304</class>
+        <class>vn.hcmute.models.Orders_24110304</class>
+		<class>vn.hcmute.models.OrderDetails_24110304</class>
+        
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            
+            <!-- CHÚ Ý: Cấu hình URL dành riêng cho bản SQLEXPRESS -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://localhost;instanceName=SQLEXPRESS;databaseName=LapTrinhWeb_24110304;encrypt=true;trustServerCertificate=true;"/>
+            
+            <!-- Tài khoản và Mật khẩu bạn vừa cung cấp -->
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value="123456"/>
+
+            <!-- Cấu hình Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            
+            
+            
+        </properties>
+    </persistence-unit>
+</persistence>

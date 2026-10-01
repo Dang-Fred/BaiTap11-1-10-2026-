@@ -1,0 +1,9 @@
+<decorators defaultdir="/WEB-INF/decorators">
+    <!-- Chỉ gọi đúng tên file, vì thư mục gốc đã được định nghĩa ở trên -->
+    <decorator name="web" page="web.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="admin" page="admin.jsp">
+        <pattern>/admin/*</pattern>
+    </decorator>
+</decorators>

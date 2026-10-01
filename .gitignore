@@ -1,0 +1,13 @@
+# Bỏ qua file biên dịch của Java
+*.class
+
+# Bỏ qua thư mục cấu hình của IDE
+.idea/
+.metadata/
+.settings/
+*.classpath
+*.project
+
+# Bỏ qua thư mục build (nếu dùng Maven/Gradle)
+target/
+build/
