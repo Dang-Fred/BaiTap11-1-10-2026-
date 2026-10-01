@@ -49,7 +49,7 @@ public class CheckoutController_24110304 extends HttpServlet {
         order.setOrderDate(new Date());
         order.setPaymentMethod("COD");
         order.setAddress(address);
-        order.setStatus("Pending");
+        order.setStatus("Mới");
 
         // 4. Tạo danh sách Chi tiết đơn hàng
         List<OrderDetails_24110304> details = new ArrayList<>();

@@ -19,6 +19,9 @@
                 </span>
             </c:if>
         </a>
+        <a href="${pageContext.request.contextPath}/order/history" style="display: inline-flex; align-items: center; text-decoration: none; padding: 10px 20px; background-color: #17a2b8; color: white; font-weight: bold; border-radius: 5px; border: 1px solid #117a8b; transition: 0.3s; margin-right: 15px;">
+    Lịch sử đơn hàng
+</a>
     </div>
     <!-- KẾT THÚC HEADER -->
 

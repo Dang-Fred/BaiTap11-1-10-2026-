@@ -19,10 +19,10 @@ public class Orders_24110304 {
     @Column(name = "PaymentMethod", length = 20)
     private String paymentMethod; // VD: "COD"
 
-    @Column(name = "Address", length = 255)
+    @Column(name = "Address", columnDefinition = "NVARCHAR(255)")
     private String address;
 
-    @Column(name = "Status", length = 20)
+    @Column(name = "Status", columnDefinition = "NVARCHAR(20)")
     private String status; // VD: "Pending", "Delivered"
 
     // Getters and Setters

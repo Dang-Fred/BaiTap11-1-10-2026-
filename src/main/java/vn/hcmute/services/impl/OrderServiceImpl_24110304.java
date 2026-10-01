@@ -14,4 +14,9 @@ public class OrderServiceImpl_24110304 implements IOrderService_24110304 {
     public boolean createOrder(Orders_24110304 order, List<OrderDetails_24110304> details) {
         return orderDao.createOrder(order, details);
     }
+    
+    @Override
+    public List<Orders_24110304> findByUsernameAndStatus(String username, String status) {
+        return orderDao.findByUsernameAndStatus(username, status);
+    }
 }

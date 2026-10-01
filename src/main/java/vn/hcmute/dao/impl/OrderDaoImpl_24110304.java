@@ -29,4 +29,25 @@ public class OrderDaoImpl_24110304 implements IOrderDao_24110304 {
             enma.close();
         }
     }
+    
+    @Override
+    public List<Orders_24110304> findByUsernameAndStatus(String username, String status) {
+        EntityManager enma = JPAConfig_24110304.getEntityManager();
+        try {
+            String jpql = "SELECT o FROM Orders_24110304 o WHERE o.username = :uname";
+            if (status != null && !status.isEmpty() && !status.equals("ALL")) {
+                jpql += " AND o.status = :st";
+            }
+            jpql += " ORDER BY o.orderDate DESC"; // Sắp xếp đơn mới nhất lên đầu
+            
+            var query = enma.createQuery(jpql, Orders_24110304.class);
+            query.setParameter("uname", username);
+            if (status != null && !status.isEmpty() && !status.equals("ALL")) {
+                query.setParameter("st", status);
+            }
+            return query.getResultList();
+        } finally {
+            enma.close();
+        }
+    }
 }
